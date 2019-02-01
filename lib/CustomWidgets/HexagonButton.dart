@@ -11,9 +11,11 @@ class HexagonButton extends StatelessWidget implements GestureDetector
   Widget build(BuildContext context) {
 
     return new Container(
+      height: 110,
+      width: 110,
       child: Stack(
           children: <Widget>[
-            Center(child: Image.asset("assets/Hexagon.png")),
+            Center(child: Image.asset("assets/hexagonnormal.png")),
             Center(child: Text(m_title)),
           ]
       )
