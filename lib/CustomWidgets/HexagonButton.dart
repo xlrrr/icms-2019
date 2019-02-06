@@ -32,25 +32,28 @@ class HexagonButtonState extends State<HexagonButton>
         child: new Container(
             height: 110,
             width: 110,
-            child: Center(child: Stack(
-                children: <Widget>[
-                  Center(child: m_isTapping ? Image.asset("assets/hexagonactive.png") : Image.asset("assets/hexagonnormal.png")),
-                  Center(child: new Container(
-                      child: FlatButton(
-                        padding: EdgeInsets.all(10.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            m_isTapping ? Image.asset(widget.imageHighlighted,width: 40,height: 40) : Image.asset(widget.image, width: 40,height: 40),
-                            Center(child: Text(widget.title, textAlign: TextAlign.center,))
-                          ],
-                        ),
+            child: Center(
+                child: Stack(
+                    children: <Widget>[
+                      Center(child: Image.asset(m_isTapping ? "assets/hexagonactive.png" : "assets/hexagonnormal.png", gaplessPlayback: true)),
+                      Center(child: new Container(
+                          child: FlatButton(
+                            onPressed: null,
+                            padding: EdgeInsets.all(10.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(m_isTapping ? widget.imageHighlighted : widget.image,width: 40,height: 40, gaplessPlayback: true),
+                                Center(child: Text(widget.title, textAlign: TextAlign.center,))
+                              ],
+                            ),
+                          )
                       )
-                  )
-                  )
-                ]
+                      )
+                    ]
+                )
             )
-            ))
+        )
     );
   }
 

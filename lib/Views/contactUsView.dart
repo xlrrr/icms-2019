@@ -34,19 +34,19 @@ class ContactUsMenu extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                   IconButton(
-                      icon: Icon(Icons.home),
-                      iconSize: 40,
-                      color: Colors.white,
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
+                    icon: Icon(Icons.arrow_back),
+                    iconSize: 40,
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   IconButton(
-                  icon: Icon(Icons.mail),
-                  color: Colors.white,
-                  iconSize: 40,
-                  onPressed: () {},
-                  ),
+                    icon: Image.asset("assets/icons/iconmail.png"),
+                    color: Colors.white,
+                    iconSize: 40,
+                    onPressed: () {},
+                  )
                 ],
               ),
             ),

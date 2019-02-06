@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:icms_bulgaria/Views/mainView.dart';
 import 'package:icms_bulgaria/Views/speakersView.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 
-void main() => runApp(ICMSApp());
+void main() {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(ICMSApp());
+  });
+}
 
 class ICMSApp extends StatelessWidget {
   @override

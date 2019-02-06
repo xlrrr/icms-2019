@@ -7,7 +7,7 @@ import 'package:icms_bulgaria/Models/speaker.dart';
 Future<List<Speaker>> fetchSpeakers() async {
 
   //TODO find speakers in DB and return them instead (now returning some comments)
-  final response = await http.get('https://icmsbg.org/icms-mobile/mobile.php');
+  final response = await http.get('https://icmsbg.org/icms-mobile/speakers.php');
 
   if (response.statusCode == 200) {
     final parsed = json.decode(response.body).cast<Map<String, dynamic>>();
@@ -27,15 +27,24 @@ class SpeakersMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: FutureBuilder<List<Speaker>>(
-          future: fetchSpeakers(),
-          builder: (context, snapshot) {
-            if (snapshot.hasError) print(snapshot.error);
+        body: new Container(
+          decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/bg.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+          child: FutureBuilder<List<Speaker>>(
+            future: fetchSpeakers(),
+            builder: (context, snapshot) {
+              if (snapshot.hasError) print(snapshot.error);
 
-            return snapshot.hasData
-                ? SpeakersList(speakers: snapshot.data)
-                : Center(child: CircularProgressIndicator());
-          },
+              return snapshot.hasData
+                  ? SpeakersList(speakers: snapshot.data)
+                  : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),));
+            },
+          ),
         ),
         bottomNavigationBar:  new Container(
           decoration: new BoxDecoration(
@@ -51,7 +60,7 @@ class SpeakersMenu extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.home),
+                  icon: Icon(Icons.arrow_back),
                   iconSize: 40,
                   color: Colors.white,
                   onPressed: () {
@@ -59,11 +68,11 @@ class SpeakersMenu extends StatelessWidget {
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.mail),
+                  icon: Image.asset("assets/icons/iconmail.png"),
                   color: Colors.white,
                   iconSize: 40,
                   onPressed: () {},
-                ),
+                )
               ],
             ),
           ),
@@ -83,10 +92,31 @@ class SpeakersList extends StatelessWidget {
     return ListView.builder(
       itemCount: speakers.length,
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(speakers[index].name),
-          subtitle: Text(speakers[index].name),
-          onTap: () => _onTapItem(context, speakers[index]),
+        return new ListTile(
+            onTap: () => _onTapItem(context, speakers[index]),
+            //leading: new CircleAvatar(
+            //  backgroundColor: Colors.transparent,
+            //  backgroundImage: NetworkImage(speakers[index].photoURL),
+            //  radius: 30.0,
+            //),
+            leading: new Container(
+                child: new CircleAvatar(
+                  backgroundColor: Colors.transparent,
+                  backgroundImage: NetworkImage(speakers[index].photoURL),
+                  radius: 30.0,
+                ),
+                padding: const EdgeInsets.all(2.0), // borde width
+                decoration: new BoxDecoration(
+                  color: const Color(0xFFFFFFFF), // border color
+                  shape: BoxShape.circle,
+                )
+            ),
+            title: new Row(
+              children: <Widget>[
+                new Expanded(child: Text(speakers[index].name, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),))
+              ],
+            ),
+          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
         );
       },
     );

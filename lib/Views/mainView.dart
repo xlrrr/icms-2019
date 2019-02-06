@@ -86,16 +86,16 @@ class MainMenu extends StatelessWidget {
           color: Colors.transparent,
           child: new Row(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
+              //IconButton(
+              //  icon: Icon(Icons.home),
+              //  iconSize: 40,
+              //  color: Colors.white,
+              //  onPressed: () {},
+              //),
               IconButton(
-                icon: Icon(Icons.home),
-                iconSize: 40,
-                color: Colors.white,
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.mail),
+                icon: Image.asset("assets/icons/iconmail.png"),
                 color: Colors.white,
                 iconSize: 40,
                 onPressed: () {},

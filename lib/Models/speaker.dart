@@ -1,20 +1,20 @@
 class Speaker {
   int id;
   String name;
-  String email;
+  String photoURL;
 
   Speaker(int id, String name, String email) {
     this.id = id;
     this.name = name;
-    this.email = email;
+    this.photoURL = email;
   }
 
   Speaker.fromJson(Map json)
-      : id = int.parse(json['comment_ID']),
-        name = json['comment_author'],
-        email = json['comment_author_email'];
+      : id = int.parse(json['ID']),
+        name = json['post_title'],
+        photoURL = "https://icmsbg.org/wp-content/uploads/" + json['meta_value'];
 
   Map toJson() {
-    return {'comment_ID': id, 'comment_author': name, 'comment_author_email': email};
+    return {'ID': id, 'post_title': name, 'meta_value': photoURL};
   }
 }
