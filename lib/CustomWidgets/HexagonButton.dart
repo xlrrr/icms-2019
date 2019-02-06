@@ -1,139 +1,81 @@
 import 'package:flutter/material.dart';
 
-class HexagonButton extends StatelessWidget implements GestureDetector
+class HexagonButton extends StatefulWidget
 {
-  HexagonButton(String title)
-  {
-    m_title = title;
-  }
+  final String title;
+  final String image;
+  final String imageHighlighted;
+
+  const HexagonButton({Key key, this.title, this.image, this.imageHighlighted, this.onPressed}) : super(key: key);
+
+  @override
+  HexagonButtonState createState() => HexagonButtonState();
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }
+}
 
-    return new Container(
-      height: 110,
-      width: 110,
-      child: Stack(
-          children: <Widget>[
-            Center(child: Image.asset("assets/hexagonnormal.png")),
-            Center(child: Text(m_title)),
-          ]
-      )
+class HexagonButtonState extends State<HexagonButton>
+{
+  @override
+  Widget build(BuildContext context) {
+    return new GestureDetector(
+        onTapDown: _tapDown,
+        onTapUp: _tapUp,
+        onTap: _onTap,
+        onTapCancel: _tapCancel,
+        child: new Container(
+            height: 110,
+            width: 110,
+            child: Center(child: Stack(
+                children: <Widget>[
+                  Center(child: m_isTapping ? Image.asset("assets/hexagonactive.png") : Image.asset("assets/hexagonnormal.png")),
+                  Center(child: new Container(
+                      child: FlatButton(
+                        padding: EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            m_isTapping ? Image.asset(widget.imageHighlighted,width: 40,height: 40) : Image.asset(widget.image, width: 40,height: 40),
+                            Center(child: Text(widget.title, textAlign: TextAlign.center,))
+                          ],
+                        ),
+                      )
+                  )
+                  )
+                ]
+            )
+            ))
     );
   }
 
-  @override
-  // TODO: implement behavior
-  HitTestBehavior get behavior => null;
+  void _tapDown(TapDownDetails details) {
+    setState(() {
+      m_isTapping = true;
+    });
+  }
 
-  @override
-  // TODO: implement child
-  Widget get child => null;
+  void _tapUp(TapUpDetails details) {
+    setState(() {
+      m_isTapping = false;
+    });
+  }
 
-  @override
-  // TODO: implement excludeFromSemantics
-  bool get excludeFromSemantics => null;
+  void _tapCancel() {
+    setState(() {
+      m_isTapping = false;
+    });
+  }
 
-  @override
-  // TODO: implement onDoubleTap
-  get onDoubleTap => null;
+  void _onTap() {
+    //open another page
+    widget.onPressed();
+  }
 
-  @override
-  // TODO: implement onHorizontalDragCancel
-  get onHorizontalDragCancel => null;
-
-  @override
-  // TODO: implement onHorizontalDragDown
-  get onHorizontalDragDown => null;
-
-  @override
-  // TODO: implement onHorizontalDragEnd
-  get onHorizontalDragEnd => null;
-
-  @override
-  // TODO: implement onHorizontalDragStart
-  get onHorizontalDragStart => null;
-
-  @override
-  // TODO: implement onHorizontalDragUpdate
-  get onHorizontalDragUpdate => null;
-
-  @override
-  // TODO: implement onLongPress
-  get onLongPress => null;
-
-  @override
-  // TODO: implement onLongPressUp
-  get onLongPressUp => null;
-
-  @override
-  // TODO: implement onPanCancel
-  get onPanCancel => null;
-
-  @override
-  // TODO: implement onPanDown
-  get onPanDown => null;
-
-  @override
-  // TODO: implement onPanEnd
-  get onPanEnd => null;
-
-  @override
-  // TODO: implement onPanStart
-  get onPanStart => null;
-
-  @override
-  // TODO: implement onPanUpdate
-  get onPanUpdate => null;
-
-  @override
-  // TODO: implement onScaleEnd
-  get onScaleEnd => null;
-
-  @override
-  // TODO: implement onScaleStart
-  get onScaleStart => null;
-
-  @override
-  // TODO: implement onScaleUpdate
-  get onScaleUpdate => null;
-
-  @override
-  // TODO: implement onTap
-  get onTap => null;
-
-  @override
-  // TODO: implement onTapCancel
-  get onTapCancel => null;
-
-  @override
-  // TODO: implement onTapDown
-  get onTapDown => null;
-
-  @override
-  // TODO: implement onTapUp
-  get onTapUp => null;
-
-  @override
-  // TODO: implement onVerticalDragCancel
-  get onVerticalDragCancel => null;
-
-  @override
-  // TODO: implement onVerticalDragDown
-  get onVerticalDragDown => null;
-
-  @override
-  // TODO: implement onVerticalDragEnd
-  get onVerticalDragEnd => null;
-
-  @override
-  // TODO: implement onVerticalDragStart
-  get onVerticalDragStart => null;
-
-  @override
-  // TODO: implement onVerticalDragUpdate
-  get onVerticalDragUpdate => null;
-
-  String m_title;
-
+  bool m_isTapping = false;
 }

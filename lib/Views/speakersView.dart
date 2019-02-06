@@ -27,19 +27,48 @@ class SpeakersMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Speakers"),
-      ),
-      body: FutureBuilder<List<Speaker>>(
-        future: fetchSpeakers(),
-        builder: (context, snapshot) {
-          if (snapshot.hasError) print(snapshot.error);
+        body: FutureBuilder<List<Speaker>>(
+          future: fetchSpeakers(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) print(snapshot.error);
 
-          return snapshot.hasData
-              ? SpeakersList(speakers: snapshot.data)
-              : Center(child: CircularProgressIndicator());
-        },
-      ),
+            return snapshot.hasData
+                ? SpeakersList(speakers: snapshot.data)
+                : Center(child: CircularProgressIndicator());
+          },
+        ),
+        bottomNavigationBar:  new Container(
+          decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/footer.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: new BottomAppBar(
+            color: Colors.transparent,
+            child: new Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.home),
+                  iconSize: 40,
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                IconButton(
+                  icon: Icon(Icons.mail),
+                  color: Colors.white,
+                  iconSize: 40,
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        )
+
     );
   }
 }
@@ -55,9 +84,9 @@ class SpeakersList extends StatelessWidget {
       itemCount: speakers.length,
       itemBuilder: (context, index) {
         return ListTile(
-            title: Text(speakers[index].name),
-            subtitle: Text(speakers[index].name),
-            onTap: () => _onTapItem(context, speakers[index]),
+          title: Text(speakers[index].name),
+          subtitle: Text(speakers[index].name),
+          onTap: () => _onTapItem(context, speakers[index]),
         );
       },
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:icms_bulgaria/Views/mainView.dart';
 import 'package:icms_bulgaria/Views/speakersView.dart';
+import 'package:icms_bulgaria/Views/contactUsView.dart';
 
 void main() => runApp(ICMSApp());
 
@@ -21,8 +22,7 @@ class ICMSApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        //home: MainMenu()
-        home: SpeakersMenu()
+        home: MainMenu()
     );
   }
 }
