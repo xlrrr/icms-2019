@@ -5,78 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2581f41a-d712-4ccd-b500-aa05bca3003c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/icons/iconmail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/icms_bulgaria_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/icms_bulgaria_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/footer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hexagonactive.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/hexagonactive.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hexagonnormal.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/hexagonnormal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hexagonstatic.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/hexagonstatic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconbuildinggradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconbuildinggradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconbuildingwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconbuildingwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconcalendargradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconcalendargradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconcalendarwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconcalendarwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconcargradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconcargradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconcarwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconcarwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconconnectgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconconnectgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconconnectwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconconnectwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconearthgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconearthgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconearthwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconearthwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconfbgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconfbgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconfbwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconfbwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconideagradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconideagradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconideawhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconideawhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconinfogradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconinfogradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconinfowhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconinfowhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconklamergradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconklamergradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconklamerwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconklamerwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconlecturegradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconlecturegradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconlecturewhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconlecturewhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconlistgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconlistgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconlistwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconlistwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconlocationgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconlocationgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconlocationwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconlocationwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconmailgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconmailgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconmailwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconmailwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconnewsgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconnewsgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconnewswhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconnewswhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconpengradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconpengradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconpenwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconpenwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconpeoplegradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconpeoplegradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconpeoplewhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconpeoplewhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconrankinggradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconrankinggradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconrankingwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconrankingwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconscalpelgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconscalpelgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconscalpelwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconscalpelwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconscrollgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconscrollgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconscrollwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconscrollwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconsofiatourgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconsofiatourgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconsofiatourwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconsofiatourwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconsuitgradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconsuitgradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/iconsuitwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/iconsuitwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icontwittergradient.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/icontwittergradient.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icontwitterwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/icontwitterwhite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Models/speaker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Models/speaker.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Views/contactUsView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Views/contactUsView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Views/mainView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Views/mainView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Views/speakersView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Views/speakersView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -164,7 +101,7 @@
       <file leaf-file-name="HexagonButton.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
+            <state relative-caret-position="17">
               <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
@@ -173,8 +110,8 @@
       <file leaf-file-name="contactUsView.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Views/contactUsView.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+            <state relative-caret-position="34">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -182,8 +119,8 @@
       <file leaf-file-name="mainView.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Views/mainView.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="101" column="16" selection-start-line="96" selection-start-column="14" selection-end-line="101" selection-end-column="16" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -191,7 +128,7 @@
       <file leaf-file-name="alignment.dart" pinned="false" current-in-tab="false">
         <entry file="file://C:/flutter/packages/flutter/lib/src/painting/alignment.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="272">
               <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
             </state>
           </provider>
@@ -200,7 +137,7 @@
       <file leaf-file-name="icon_button.dart" pinned="false" current-in-tab="false">
         <entry file="file://C:/flutter/packages/flutter/lib/src/material/icon_button.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="1955">
               <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
             </state>
           </provider>
@@ -209,11 +146,8 @@
       <file leaf-file-name="speakersView.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/Views/speakersView.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="44" column="120" selection-start-line="44" selection-start-column="120" selection-end-line="44" selection-end-column="120" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1718">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -221,7 +155,7 @@
       <file leaf-file-name="progress_indicator.dart" pinned="false" current-in-tab="false">
         <entry file="file://C:/flutter/packages/flutter/lib/src/material/progress_indicator.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="6664">
               <caret line="400" column="8" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
             </state>
           </provider>
@@ -268,8 +202,8 @@
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart" />
         <option value="$PROJECT_DIR$/lib/Models/speaker.dart" />
-        <option value="$PROJECT_DIR$/lib/Views/mainView.dart" />
         <option value="$PROJECT_DIR$/lib/Views/contactUsView.dart" />
+        <option value="$PROJECT_DIR$/lib/Views/mainView.dart" />
         <option value="$PROJECT_DIR$/lib/Views/speakersView.dart" />
       </list>
     </option>
@@ -287,7 +221,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,6 +255,7 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -426,45 +360,47 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
-      <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.43230277" side_tool="true" visible="true" weight="0.32570806" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.4978678" weight="0.3278867" />
-      <window_info anchor="right" id="Flutter Outline" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="12" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.4248366" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.3278867" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="4" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.43283582" side_tool="true" visible="true" weight="0.32570806" />
       <window_info anchor="bottom" id="Flutter Performance" order="8" sideWeight="0.50319827" side_tool="true" weight="0.30827886" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5676972" weight="0.32570806" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.4978678" weight="0.3278867" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5671642" weight="0.32570806" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4914712" weight="0.32900432" />
+      <window_info anchor="right" id="Flutter Outline" order="7" />
+      <window_info anchor="bottom" id="Logcat" order="12" />
       <window_info id="Captures" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.4248366" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Flutter Inspector" order="3" />
+      <window_info anchor="right" id="Assistant" order="4" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Assistant" order="4" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.4968017" weight="0.31045753" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.4978678" weight="0.30952382" />
       <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.57014924" visible="true" weight="0.34918794" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -476,9 +412,7 @@
       <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.42985076" side_tool="true" visible="true" weight="0.34918794" />
-      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17761195" />
       <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
       <window_info anchor="right" id="Flutter Outline" order="7" />
       <window_info anchor="right" id="Assistant" order="4" weight="0.32995737" />
@@ -486,13 +420,14 @@
       <window_info anchor="bottom" id="Flutter Performance" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4914712" weight="0.32900432" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17761195" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.4978678" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Image Layers" order="4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
@@ -513,16 +448,67 @@
           <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/Views/speakersView.dart</url>
-          <line>11</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Views/contactUsView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Views/mainView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="101" column="16" selection-start-line="96" selection-start-column="14" selection-end-line="101" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/flutter/packages/flutter/lib/src/painting/alignment.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/flutter/packages/flutter/lib/src/material/icon_button.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/flutter/packages/flutter/lib/src/material/progress_indicator.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6664">
+          <caret line="400" column="8" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Models/speaker.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Views/speakersView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="44" column="120" selection-start-line="44" selection-start-column="120" selection-end-line="44" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
@@ -570,9 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/flutter/packages/flutter/lib/src/widgets/text.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -678,22 +654,15 @@
     </entry>
     <entry file="file://C:/flutter/packages/flutter/lib/src/material/icon_button.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="1955">
           <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/flutter/packages/flutter/lib/src/painting/alignment.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="272">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Views/mainView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="101" column="16" selection-start-line="96" selection-start-column="14" selection-end-line="101" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -704,27 +673,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Views/contactUsView.dart">
+    <entry file="file://C:/flutter/packages/flutter/lib/src/material/progress_indicator.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        <state relative-caret-position="6664">
+          <caret line="400" column="8" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/flutter/packages/flutter/lib/src/material/progress_indicator.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Views/contactUsView.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="400" column="8" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/CustomWidgets/HexagonButton.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Views/mainView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Views/speakersView.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="44" column="120" selection-start-line="44" selection-start-column="120" selection-end-line="44" selection-end-column="120" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1718">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

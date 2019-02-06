@@ -98,7 +98,12 @@ class MainMenu extends StatelessWidget {
                 icon: Image.asset("assets/icons/iconmail.png"),
                 color: Colors.white,
                 iconSize: 40,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ContactUsMenu()),
+                  );
+                },
               ),
             ],
           ),

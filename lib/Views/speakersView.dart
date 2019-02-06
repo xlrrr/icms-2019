@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 import 'package:icms_bulgaria/Models/speaker.dart';
+import 'package:icms_bulgaria/Views/contactUsView.dart';
 
 Future<List<Speaker>> fetchSpeakers() async {
 
@@ -71,7 +72,12 @@ class SpeakersMenu extends StatelessWidget {
                   icon: Image.asset("assets/icons/iconmail.png"),
                   color: Colors.white,
                   iconSize: 40,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ContactUsMenu()),
+                    );
+                  },
                 )
               ],
             ),

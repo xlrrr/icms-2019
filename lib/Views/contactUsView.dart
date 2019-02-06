@@ -40,12 +40,6 @@ class ContactUsMenu extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                  ),
-                  IconButton(
-                    icon: Image.asset("assets/icons/iconmail.png"),
-                    color: Colors.white,
-                    iconSize: 40,
-                    onPressed: () {},
                   )
                 ],
               ),
