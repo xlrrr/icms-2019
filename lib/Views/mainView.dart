@@ -23,7 +23,7 @@ class MainMenu extends StatelessWidget {
                   children: <Widget>[
                     new Container(
                       margin: new EdgeInsets.only(right: 0.0, bottom: 340.0),
-                      child: HexagonButton(title:"Essential Information",imageHighlighted: "assets/icons/iconinfowhite.png", image: "assets/icons/iconinfogradient.png"),
+                      child: HexagonButton(title:"Essential information",imageHighlighted: "assets/icons/iconideawhite.png", image: "assets/icons/iconideagradient.png"),
                     ),
                     new Container(
                       margin: new EdgeInsets.only(right: 105.0, bottom: 160.0),
@@ -34,7 +34,11 @@ class MainMenu extends StatelessWidget {
                       child: HexagonButton(title:"Schedule",imageHighlighted: "assets/icons/iconcalendarwhite.png", image: "assets/icons/iconcalendargradient.png"),
                     ),
                     new Container(
-                      margin: new EdgeInsets.only(left: 0.0, top: 20.0),
+                      margin: new EdgeInsets.only(right: 0.0, top: 20.0),
+                      child: HexagonButton(title:"Sessions",imageHighlighted: "assets/icons/iconlecturewhite.png", image: "assets/icons/iconlecturegradient.png"),
+                    ),
+                    new Container(
+                      margin: new EdgeInsets.only(right: 210.0, top: 20.0),
                       child: HexagonButton(title: "Keynote speakers",imageHighlighted: "assets/icons/iconpeoplewhite.png", image: "assets/icons/iconpeoplegradient.png",
                           onPressed: (){
                             Navigator.push(
@@ -43,10 +47,6 @@ class MainMenu extends StatelessWidget {
                             );
                           }),
 
-                    ),
-                    new Container(
-                      margin: new EdgeInsets.only(right: 210.0, top: 20.0),
-                      child: HexagonButton(title:"Sessions",imageHighlighted: "assets/icons/iconlecturewhite.png", image: "assets/icons/iconlecturegradient.png"),
                     ),
                     new Container(
                       margin: new EdgeInsets.only(left: 210.0, top: 20.0),

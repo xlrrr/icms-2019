@@ -44,7 +44,7 @@ class HexagonButtonState extends State<HexagonButton>
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(m_isTapping ? widget.imageHighlighted : widget.image,width: 40,height: 40, gaplessPlayback: true),
-                                Center(child: Text(widget.title, textAlign: TextAlign.center,))
+                                Center(child: Text(widget.title, textAlign: TextAlign.center, style: TextStyle(color: m_isTapping ? Colors.white : Color(0xFF13909B)),))
                               ],
                             ),
                           )

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:icms_bulgaria/Views/splashScreen.dart';
 import 'package:icms_bulgaria/Views/mainView.dart';
-import 'package:icms_bulgaria/Views/speakersView.dart';
-import 'package:icms_bulgaria/Views/contactUsView.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -28,7 +27,10 @@ class ICMSApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: MainMenu()
+        home: SplashMenu(),
+        routes: <String, WidgetBuilder>{
+          '/HomeScreen': (BuildContext context) => new MainMenu()
+        },
     );
   }
 }

@@ -3,10 +3,10 @@ class Speaker {
   String name;
   String photoURL;
 
-  Speaker(int id, String name, String email) {
+  Speaker(int id, String name, String photoURL) {
     this.id = id;
     this.name = name;
-    this.photoURL = email;
+    this.photoURL = photoURL;
   }
 
   Speaker.fromJson(Map json)
