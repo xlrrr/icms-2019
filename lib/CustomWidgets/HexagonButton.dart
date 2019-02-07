@@ -5,8 +5,9 @@ class HexagonButton extends StatefulWidget
   final String title;
   final String image;
   final String imageHighlighted;
+  final double size;
 
-  const HexagonButton({Key key, this.title, this.image, this.imageHighlighted, this.onPressed}) : super(key: key);
+  const HexagonButton({Key key, this.title, this.image, this.imageHighlighted, this.onPressed, this.size = 110.0}) : super(key: key);
 
   @override
   HexagonButtonState createState() => HexagonButtonState();
@@ -30,8 +31,8 @@ class HexagonButtonState extends State<HexagonButton>
         onTap: _onTap,
         onTapCancel: _tapCancel,
         child: new Container(
-            height: 110,
-            width: 110,
+            height: widget.size,
+            width: widget.size,
             child: Center(
                 child: Stack(
                     children: <Widget>[
@@ -43,8 +44,8 @@ class HexagonButtonState extends State<HexagonButton>
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Image.asset(m_isTapping ? widget.imageHighlighted : widget.image,width: 40,height: 40, gaplessPlayback: true),
-                                Center(child: Text(widget.title, textAlign: TextAlign.center, style: TextStyle(color: m_isTapping ? Colors.white : Color(0xFF13909B)),))
+                                Image.asset(m_isTapping ? widget.imageHighlighted : widget.image,width: widget.size /2,height: widget.size / 2, gaplessPlayback: true),
+                                Center(child: Text(widget.title, textAlign: TextAlign.center, style: TextStyle(color: m_isTapping ? Colors.white : Color(0xFF13909B), fontSize: widget.size / 9),))
                               ],
                             ),
                           )
