@@ -14,7 +14,7 @@ class ICMSApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'ICMS 2019',
+        title: 'ICMS Bulgaria',
         theme: ThemeData(
           // This is the theme of your application.
           //
