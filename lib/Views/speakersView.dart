@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:icms_bulgaria/Models/speaker.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
+import 'package:icms_bulgaria/Views/speakerView.dart';
 
 Future<List<Speaker>> fetchSpeakers() async {
 
@@ -35,16 +36,34 @@ class SpeakersMenu extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-          child: FutureBuilder<List<Speaker>>(
-            future: fetchSpeakers(),
-            builder: (context, snapshot) {
-              if (snapshot.hasError) print(snapshot.error);
+          child: Stack(
+              children: <Widget>[Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  new Container(
+                    margin: new EdgeInsets.only(left: 250.0),
+                    child: Image.asset("assets/logo.png"),
+                    padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
+                  )
+                ],
+              ),
+              new Container(
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: FutureBuilder<List<Speaker>>(
+                  future: fetchSpeakers(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasError) print(snapshot.error);
 
-              return snapshot.hasData
-                  ? SpeakersList(speakers: snapshot.data)
-                  : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),));
-            },
+                    return snapshot.hasData
+                        ? SpeakersList(speakers: snapshot.data)
+                        : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),));
+                  },
+                ),
+              )
+
+              ]
           ),
         ),
         bottomNavigationBar:  new Container(
@@ -99,29 +118,29 @@ class SpeakersList extends StatelessWidget {
       itemCount: speakers.length,
       itemBuilder: (context, index) {
         return new ListTile(
-            onTap: () => _onTapItem(context, speakers[index]),
-            //leading: new CircleAvatar(
-            //  backgroundColor: Colors.transparent,
-            //  backgroundImage: NetworkImage(speakers[index].photoURL),
-            //  radius: 30.0,
-            //),
-            leading: new Container(
-                child: new CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  backgroundImage: NetworkImage(speakers[index].photoURL),
-                  radius: 30.0,
-                ),
-                padding: const EdgeInsets.all(2.0), // borde width
-                decoration: new BoxDecoration(
-                  color: const Color(0xFFFFFFFF), // border color
-                  shape: BoxShape.circle,
-                )
-            ),
-            title: new Row(
-              children: <Widget>[
-                new Expanded(child: Text(speakers[index].name, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),))
-              ],
-            ),
+          onTap: () => _onTapItem(context, speakers[index]),
+          //leading: new CircleAvatar(
+          //  backgroundColor: Colors.transparent,
+          //  backgroundImage: NetworkImage(speakers[index].photoURL),
+          //  radius: 30.0,
+          //),
+          leading: new Container(
+              child: new CircleAvatar(
+                backgroundColor: Colors.transparent,
+                backgroundImage: NetworkImage(speakers[index].photoURL),
+                radius: 30.0,
+              ),
+              padding: const EdgeInsets.all(2.0), // border width
+              decoration: new BoxDecoration(
+                color: const Color(0xFFFFFFFF), // border color
+                shape: BoxShape.circle,
+              )
+          ),
+          title: new Row(
+            children: <Widget>[
+              new Expanded(child: Text(speakers[index].name, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),))
+            ],
+          ),
           contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
         );
       },
@@ -129,8 +148,9 @@ class SpeakersList extends StatelessWidget {
   }
 
   void _onTapItem(BuildContext context, Speaker speaker) {
-    Scaffold
-        .of(context)
-        .showSnackBar(new SnackBar(content: new Text(speaker.id.toString() + ' - ' + speaker.name), duration: Duration(milliseconds: 1),));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SpeakerMenu(speaker: speaker)),
+    );
   }
 }

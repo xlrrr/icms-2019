@@ -3,6 +3,7 @@ import 'package:icms_bulgaria/CustomWidgets/HexagonButton.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoView.dart';
 import 'package:icms_bulgaria/Views/speakersView.dart';
+import 'package:icms_bulgaria/Views/scheduleView.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -52,7 +53,13 @@ class MainMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 105.0, bottom: 160.0),
-                          child: HexagonButton(title:"Schedule",imageHighlighted: "assets/icons/iconcalendarwhite.png", image: "assets/icons/iconcalendargradient.png"),
+                          child: HexagonButton(title:"Schedule",imageHighlighted: "assets/icons/iconcalendarwhite.png", image: "assets/icons/iconcalendargradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => ScheduleMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 0.0, top: 20.0),
