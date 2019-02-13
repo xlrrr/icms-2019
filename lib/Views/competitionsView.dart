@@ -1,11 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+import 'package:icms_bulgaria/Models/competition.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 
+Future<List<Competition>> fetchCompetitions() async {
+
+  //TODO find speakers in DB and return them instead (now returning some comments)
+  final response = await http.get('https://icmsbg.org/icms-mobile/competitions.php');
+
+  if (response.statusCode == 200) {
+    final parsed = json.decode(response.body).cast<Map<String, dynamic>>();
+
+    return parsed.map<Competition>((json) => Competition.fromJson(json)).toList();
+  } else {
+    // If that response was not OK, throw an error.
+    throw Exception('Failed to load speakers');
+  }
+}
+
 class CompetitionsMenu extends StatelessWidget {
+  final String title;
+
+  CompetitionsMenu({Key key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
         body: new Container(
           decoration: new BoxDecoration(
             image: new DecorationImage(
@@ -19,16 +41,20 @@ class CompetitionsMenu extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  new Container(
-                    margin: new EdgeInsets.only(left: 250.0),
-                    child: Image.asset("assets/logo.png"),
-                    padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
-                  )
                 ],
               ),
               new Container(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: null,
+                child: FutureBuilder<List<Competition>>(
+                  future: fetchCompetitions(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasError) print(snapshot.error);
+
+                    return snapshot.hasData
+                        ? CompetitionsList(competitions: snapshot.data)
+                        : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),));
+                  },
+                ),
               )
 
               ]
@@ -70,6 +96,25 @@ class CompetitionsMenu extends StatelessWidget {
             ),
           ),
         )
+
+    );
+  }
+}
+
+class CompetitionsList extends StatelessWidget {
+  final List<Competition> competitions;
+
+  CompetitionsList({Key key, this.competitions}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: competitions.length,
+      itemBuilder: (context, index) {
+        return Container(
+          child: Text(competitions[index].postContent, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, height: 1.5), textAlign: TextAlign.center,),
+        );
+      },
     );
   }
 }
