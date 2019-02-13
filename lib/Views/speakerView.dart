@@ -41,7 +41,7 @@ class SpeakerMenu extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             new Expanded(child: new Container(
-                              child: Text(speaker.name, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30), textAlign: TextAlign.center),
+                              child: Text(speaker.name, style: TextStyle(color: Colors.white,height: 1.5, fontWeight: FontWeight.bold, fontSize: 30), textAlign: TextAlign.center),
                               margin: EdgeInsets.only(bottom: 30.0, left: 10.0, right: 10.0),
                             )
                             )
@@ -49,10 +49,10 @@ class SpeakerMenu extends StatelessWidget {
                           ],
                         ),
                         new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             new Expanded(child: new Container(
-                              child: Text(speaker.postContent, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 17), textAlign: TextAlign.center),
+                              child: Text(speaker.postContent, style: TextStyle(color: Colors.white,height: 1.5, fontWeight: FontWeight.bold, fontSize: 17), textAlign: TextAlign.center),
                               margin: EdgeInsets.symmetric(horizontal: 10.0),
                             )
                             )
