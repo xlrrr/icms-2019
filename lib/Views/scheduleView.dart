@@ -3,6 +3,7 @@ import 'package:icms_bulgaria/Models/scheduleEntry.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
+import 'package:icms_bulgaria/Views/contactUsView.dart';
 
 Future<List<ScheduleEntry>> fetchSchedule(String slug) async {
 
@@ -111,6 +112,17 @@ class ScheduleMenu extends StatelessWidget {
                   color: Colors.white,
                   onPressed: () {
                     Navigator.pop(context);
+                  },
+                ),
+                IconButton(
+                  icon: Image.asset("assets/icons/iconmail.png"),
+                  color: Colors.white,
+                  iconSize: 40,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ContactUsMenu()),
+                    );
                   },
                 )
               ],

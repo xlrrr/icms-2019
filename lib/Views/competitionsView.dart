@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 
-class empty extends StatelessWidget {
+class CompetitionsMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

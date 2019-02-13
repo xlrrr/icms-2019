@@ -4,6 +4,10 @@ import 'package:icms_bulgaria/Views/contactUsView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoView.dart';
 import 'package:icms_bulgaria/Views/speakersView.dart';
 import 'package:icms_bulgaria/Views/scheduleView.dart';
+import 'package:icms_bulgaria/Views/sessionsView.dart';
+import 'package:icms_bulgaria/Views/networkingView.dart';
+import 'package:icms_bulgaria/Views/workshopsView.dart';
+import 'package:icms_bulgaria/Views/competitionsView.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -63,7 +67,13 @@ class MainMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 0.0, top: 20.0),
-                          child: HexagonButton(title:"Sessions",imageHighlighted: "assets/icons/iconlecturewhite.png", image: "assets/icons/iconlecturegradient.png"),
+                          child: HexagonButton(title:"Sessions",imageHighlighted: "assets/icons/iconlecturewhite.png", image: "assets/icons/iconlecturegradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => SessionsMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 210.0, top: 20.0),
@@ -78,15 +88,33 @@ class MainMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 210.0, top: 20.0),
-                          child: HexagonButton(title:"Workshops",imageHighlighted: "assets/icons/iconscalpelwhite.png", image: "assets/icons/iconscalpelgradient.png"),
+                          child: HexagonButton(title:"Workshops",imageHighlighted: "assets/icons/iconscalpelwhite.png", image: "assets/icons/iconscalpelgradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => WorkshopsMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 105.0, top: 200.0),
-                          child: HexagonButton(title:"Networking",imageHighlighted: "assets/icons/iconconnectwhite.png", image: "assets/icons/iconconnectgradient.png"),
+                          child: HexagonButton(title:"Networking",imageHighlighted: "assets/icons/iconconnectwhite.png", image: "assets/icons/iconconnectgradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => NetworkingMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 105.0, top: 200.0),
-                          child: HexagonButton(title:"Competitions",imageHighlighted: "assets/icons/iconrankingwhite.png", image: "assets/icons/iconrankinggradient.png"),
+                          child: HexagonButton(title:"Competitions",imageHighlighted: "assets/icons/iconrankingwhite.png", image: "assets/icons/iconrankinggradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => CompetitionsMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 0.0, top: 380.0),
