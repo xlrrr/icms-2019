@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "633308750305",
+    "firebase_url": "https://icmsbulgaria-231710.firebaseio.com",
+    "project_id": "icmsbulgaria-231710",
+    "storage_bucket": "icmsbulgaria-231710.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633308750305:android:5cbee00ffda3de21",
+        "android_client_info": {
+          "package_name": "com.frosttale.icmsbulgaria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633308750305-vdt2i2q52qrkrl2maddusaa0thph5nlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDctiixbc6F0hWhQ9B0EfLk1y5Ch2wx51A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

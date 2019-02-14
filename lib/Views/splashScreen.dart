@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class SplashMenu extends StatefulWidget  {
   @override
@@ -9,6 +10,8 @@ class SplashMenu extends StatefulWidget  {
 class _SplashScreenState extends State<SplashMenu> with TickerProviderStateMixin {
   AnimationController _controller;
   Animation _animation;
+
+  FirebaseMessaging _firebaseMessagin = new FirebaseMessaging();
 
   startTime() async {
     var _duration = new Duration(seconds: 5);
@@ -44,6 +47,25 @@ class _SplashScreenState extends State<SplashMenu> with TickerProviderStateMixin
   @override
   void initState() {
     super.initState();
+    _firebaseMessagin.configure(
+      onMessage: (Map<String, dynamic> message)
+      {
+        print(message);
+      },
+      onResume: (Map<String, dynamic> message)
+      {
+        print(message);
+      },
+      onLaunch: (Map<String, dynamic> message)
+      {
+        print(message);
+      },
+    );
+
+    _firebaseMessagin.getToken().then((token){
+      print(token);
+    });
+
     startTime();
 
     _controller = AnimationController(vsync: this, duration: Duration(seconds: 1));
