@@ -62,6 +62,8 @@ class _SplashScreenState extends State<SplashMenu> with TickerProviderStateMixin
       },
     );
 
+    _firebaseMessagin.subscribeToTopic("news");
+
     _firebaseMessagin.getToken().then((token){
       print(token);
     });
