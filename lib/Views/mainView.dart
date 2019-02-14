@@ -8,6 +8,7 @@ import 'package:icms_bulgaria/Views/sessionsView.dart';
 import 'package:icms_bulgaria/Views/networkingView.dart';
 import 'package:icms_bulgaria/Views/workshopsView.dart';
 import 'package:icms_bulgaria/Views/competitionsView.dart';
+import 'package:icms_bulgaria/Views/newsView.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -53,7 +54,13 @@ class MainMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 105.0, bottom: 160.0),
-                          child: HexagonButton(title:"News",imageHighlighted: "assets/icons/iconnewswhite.png", image: "assets/icons/iconnewsgradient.png"),
+                          child: HexagonButton(title:"News",imageHighlighted: "assets/icons/iconnewswhite.png", image: "assets/icons/iconnewsgradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => NewsMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 105.0, bottom: 160.0),
