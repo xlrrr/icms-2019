@@ -6,8 +6,6 @@ import 'package:icms_bulgaria/Models/workshop.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 
 Future<List<Workshop>> fetchWorkshops() async {
-
-  //TODO find speakers in DB and return them instead (now returning some comments)
   final response = await http.get('https://icmsbg.org/icms-mobile/workshops.php');
 
   if (response.statusCode == 200) {
@@ -159,25 +157,7 @@ class WorkshopsList extends StatelessWidget {
                 ),
               )
             ],
-          ),
-          //leading: new Container(
-          //    child: new CircleAvatar(
-          //      backgroundColor: Colors.transparent,
-          //      backgroundImage: NetworkImage(workshops[index].photoURL),
-          //      radius: 30.0,
-          //    ),
-          //    padding: const EdgeInsets.all(2.0), // border width
-          //    decoration: new BoxDecoration(
-          //      color: const Color(0xFFFFFFFF), // border color
-          //      shape: BoxShape.circle,
-          //    )
-          //),
-          //title: new Row(
-          //  children: <Widget>[
-          //    new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, height: 1.3)))
-          //  ],
-          //),
-          //contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
+          )
         );
       },
     );

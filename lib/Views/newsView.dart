@@ -7,8 +7,6 @@ import 'package:icms_bulgaria/Views/contactUsView.dart';
 import 'package:icms_bulgaria/Views/newsEntryView.dart';
 
 Future<List<NewsEntry>> fetchNews() async {
-
-  //TODO find speakers in DB and return them instead (now returning some comments)
   final response = await http.get('https://icmsbg.org/icms-mobile/news.php');
 
   if (response.statusCode == 200) {

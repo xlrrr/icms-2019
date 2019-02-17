@@ -5,20 +5,18 @@ import 'dart:convert';
 import 'package:icms_bulgaria/Models/competition.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 
-Future<List<Competition>> fetchCompetitions() async {
-
-  //TODO find speakers in DB and return them instead (now returning some comments)
-  final response = await http.get('https://icmsbg.org/icms-mobile/competitions.php');
-
-  if (response.statusCode == 200) {
-    final parsed = json.decode(response.body).cast<Map<String, dynamic>>();
-
-    return parsed.map<Competition>((json) => Competition.fromJson(json)).toList();
-  } else {
-    // If that response was not OK, throw an error.
-    throw Exception('Failed to load speakers');
-  }
-}
+//Future<List<Competition>> fetchCompetitions() async {
+//  final response = await http.get('https://icmsbg.org/icms-mobile/competitions.php');
+//
+//  if (response.statusCode == 200) {
+//    final parsed = json.decode(response.body).cast<Map<String, dynamic>>();
+//
+//    return parsed.map<Competition>((json) => Competition.fromJson(json)).toList();
+//  } else {
+//    // If that response was not OK, throw an error.
+//    throw Exception('Failed to load speakers');
+//  }
+//}
 
 class CompetitionsMenu extends StatelessWidget {
   final String title;
@@ -45,15 +43,73 @@ class CompetitionsMenu extends StatelessWidget {
               ),
               new Container(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: FutureBuilder<List<Competition>>(
-                  future: fetchCompetitions(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasError) print(snapshot.error);
-
-                    return snapshot.hasData
-                        ? CompetitionsList(competitions: snapshot.data)
-                        : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),));
-                  },
+                child: ListView(
+                  children: <Widget>[
+                    Card(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.all(5),
+                              //padding: EdgeInsets.symmetric(vertical: 20),
+                              child: Image.network(
+                                'https://icmsbg.org/wp-content/uploads/2019/02/ICMS__awardsi-01.png',
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.symmetric(vertical: 20),
+                              child: Row(
+                                //mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  new Expanded(child: Text("Scientific Competition", style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
+                                ],
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(20),
+                              child: Row(
+                                //mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  new Expanded(child: Text("The OC of ICMS grants your excellent work with two major awards:\nBEST PRESENTATION AWARD – 500 €\nBEST POSTER AWARD – 500 €\nThe best Oral and Poster presentation in each category (Preclinic, Therapy, Surgery, Public Health) will compete during the Presentation Finals on 12.05!", style: TextStyle(color: Colors.black, height: 1.3, fontSize: 15), textAlign: TextAlign.center))
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                    ),
+                    Card(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.all(5),
+                              //padding: EdgeInsets.symmetric(vertical: 20),
+                              child: Image.network(
+                                "https://www.elsevier.com/__data/assets/image/0007/182545/Elsevier-Foundation-Green-and-Sustainable-Chemistry-Challenge-1024x512.jpg"
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.symmetric(vertical: 20),
+                              child: Row(
+                                //mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  new Expanded(child: Text("The Elsevier Challenge", style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
+                                ],
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(20),
+                              child: Row(
+                                //mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  new Expanded(child: Text("Tuka\nshte\nslojim\nmalko\ntext", style: TextStyle(color: Colors.black, height: 1.3, fontSize: 15), textAlign: TextAlign.center))
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                    )
+                  ],
                 ),
               )
 
@@ -101,20 +157,20 @@ class CompetitionsMenu extends StatelessWidget {
   }
 }
 
-class CompetitionsList extends StatelessWidget {
-  final List<Competition> competitions;
-
-  CompetitionsList({Key key, this.competitions}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: competitions.length,
-      itemBuilder: (context, index) {
-        return Container(
-          child: Text(competitions[index].postContent, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, height: 1.5), textAlign: TextAlign.center,),
-        );
-      },
-    );
-  }
-}
+//class CompetitionsList extends StatelessWidget {
+//  final List<Competition> competitions;
+//
+//  CompetitionsList({Key key, this.competitions}) : super(key: key);
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    return ListView.builder(
+//      itemCount: competitions.length,
+//      itemBuilder: (context, index) {
+//        return Container(
+//          child: Text(competitions[index].postContent, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, height: 1.5), textAlign: TextAlign.center,),
+//        );
+//      },
+//    );
+//  }
+//}

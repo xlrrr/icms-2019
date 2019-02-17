@@ -6,8 +6,6 @@ import 'dart:convert';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
 
 Future<List<ScheduleEntry>> fetchSchedule(String slug) async {
-
-  //TODO find speakers in DB and return them instead (now returning some comments)
   final response = await http.get('https://icmsbg.org/icms-mobile/schedule.php?slug=' + slug);
 
   if (response.statusCode == 200) {
