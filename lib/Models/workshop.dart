@@ -1,14 +1,23 @@
 class Workshop {
-  String postContent;
+  String title;
+  String photoURL;
+  String place;
+  String time;
 
-  Workshop(String postContent) {
-    this.postContent = postContent;
+  Workshop(String postContent, String photoURL, String place, String time) {
+    this.title = postContent;
+    this.photoURL = photoURL;
+    this.place = place;
+    this.time = time;
   }
 
   Workshop.fromJson(Map json)
-      : postContent = json['post_content'].replaceAll(new RegExp(r'\[(.*?)\]|(\<(.*?)\>)'), '');
+      : title = json['title'],
+        photoURL = "https://icmsbg.org/wp-content/uploads/" + json['photoURL'],
+        place = json['place'],
+        time = json['time'];
 
   Map toJson() {
-    return {'post_content': postContent};
+    return {'title': title, 'photoURL':photoURL , 'place':place , 'time':time};
   }
 }

@@ -111,8 +111,73 @@ class WorkshopsList extends StatelessWidget {
     return ListView.builder(
       itemCount: workshops.length,
       itemBuilder: (context, index) {
-        return Container(
-          child: Text(workshops[index].postContent, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, height: 1.5), textAlign: TextAlign.center,),
+        return new Card(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Container(
+                      child: new CircleAvatar(
+                        backgroundColor: Colors.transparent,
+                        backgroundImage: NetworkImage(workshops[index].photoURL),
+                        radius: 100.0,
+                      )
+                  )
+                ]
+              ),
+              Row(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
+                ],
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Image.asset("assets/icons/iconlocationgradient.png", height: 20,),
+                        Text(workshops[index].place, style: TextStyle(color: Colors.black, fontSize: 20), textAlign: TextAlign.center)
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Image.asset("assets/icons/iconcalendargradient.png", height: 20,),
+                        Text(workshops[index].time, style: TextStyle(color: Colors.black, fontSize: 20), textAlign: TextAlign.center)
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+          //leading: new Container(
+          //    child: new CircleAvatar(
+          //      backgroundColor: Colors.transparent,
+          //      backgroundImage: NetworkImage(workshops[index].photoURL),
+          //      radius: 30.0,
+          //    ),
+          //    padding: const EdgeInsets.all(2.0), // border width
+          //    decoration: new BoxDecoration(
+          //      color: const Color(0xFFFFFFFF), // border color
+          //      shape: BoxShape.circle,
+          //    )
+          //),
+          //title: new Row(
+          //  children: <Widget>[
+          //    new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, height: 1.3)))
+          //  ],
+          //),
+          //contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
         );
       },
     );
