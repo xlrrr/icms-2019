@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:icms_bulgaria/CustomWidgets/HexagonButton.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
+import 'package:icms_bulgaria/Views/essentialInfoViews/certificationView.dart';
+import 'package:icms_bulgaria/Views/essentialInfoViews/transportationView.dart';
+import 'package:icms_bulgaria/Views/essentialInfoViews/registrationView.dart';
+import 'package:icms_bulgaria/Views/essentialInfoViews/speakerPreviewView.dart';
 
 class EssentialInfoMenu extends StatelessWidget {
   @override
@@ -40,11 +44,23 @@ class EssentialInfoMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 105.0, bottom: 160.0),
-                          child: HexagonButton(title:"Transportation",imageHighlighted: "assets/icons/iconcarwhite.png", image: "assets/icons/iconcargradient.png"),
+                          child: HexagonButton(title:"Transportation",imageHighlighted: "assets/icons/iconcarwhite.png", image: "assets/icons/iconcargradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => TransportationMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 105.0, bottom: 160.0),
-                          child: HexagonButton(title:"Registration",imageHighlighted: "assets/icons/iconpenwhite.png", image: "assets/icons/iconpengradient.png"),
+                          child: HexagonButton(title:"Registration",imageHighlighted: "assets/icons/iconpenwhite.png", image: "assets/icons/iconpengradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => RegistrationMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 0.0, top: 20.0),
@@ -81,7 +97,13 @@ class EssentialInfoMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 210.0, top: 20.0),
-                          child: HexagonButton(title: "Certification",imageHighlighted: "assets/icons/iconscrollwhite.png", image: "assets/icons/iconscrollgradient.png"),
+                          child: HexagonButton(title: "Certification",imageHighlighted: "assets/icons/iconscrollwhite.png", image: "assets/icons/iconscrollgradient.png",
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => CertificationMenu()),
+                                );
+                              }),
 
                         ),
                         new Container(
@@ -90,7 +112,13 @@ class EssentialInfoMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 80.0, top: 185.0),
-                          child: HexagonButton(title:"Speaker preview",imageHighlighted: "assets/icons/iconklamerwhite.png", image: "assets/icons/iconklamergradient.png", size: 80),
+                          child: HexagonButton(title:"Speaker preview",imageHighlighted: "assets/icons/iconklamerwhite.png", image: "assets/icons/iconklamergradient.png", size: 80,
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => SpeakerPreviewMenu()),
+                                );
+                              }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 80.0, top: 185.0),
