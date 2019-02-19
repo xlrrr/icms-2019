@@ -5,6 +5,7 @@ import 'package:icms_bulgaria/Views/essentialInfoViews/certificationView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoViews/transportationView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoViews/registrationView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoViews/speakerPreviewView.dart';
+import 'package:icms_bulgaria/Views/essentialInfoViews/regulationsView.dart';
 
 class EssentialInfoMenu extends StatelessWidget {
   @override
@@ -122,7 +123,12 @@ class EssentialInfoMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 80.0, top: 185.0),
-                          child: HexagonButton(title:"Regulations",imageHighlighted: "assets/icons/iconlistwhite.png", image: "assets/icons/iconlistgradient.png", size: 80),
+                          child: HexagonButton(title:"Regulations",imageHighlighted: "assets/icons/iconlistwhite.png", image: "assets/icons/iconlistgradient.png", size: 80, onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => RegulationsMenu()),
+                            );
+                          }),
                         )
                       ],
                     )

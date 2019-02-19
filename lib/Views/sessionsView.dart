@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icms_bulgaria/Views/contactUsView.dart';
-import 'package:icms_bulgaria/Views/essentialInfoViews/transportationView.dart';
+import 'package:icms_bulgaria/CustomWidgets/bullet.dart';
 
 class SessionsMenu extends StatelessWidget {
 
