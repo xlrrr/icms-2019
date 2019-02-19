@@ -160,7 +160,7 @@ class ScheduleList extends StatelessWidget {
                     color: Colors.transparent,
                     child: Container(
                       width: MediaQuery.of(context).size.width/2 - 80,
-                      child: Text(scheduleEntries[index].name, textAlign: index % 2 == 0 ? TextAlign.left : TextAlign.right, style: TextStyle(color: Colors.white, fontSize: 20, height: 1.3)),
+                          child: Text(scheduleEntries[index].name, textAlign: index % 2 == 0 ? TextAlign.left : TextAlign.right, style: TextStyle(color: Colors.white, fontSize: 18, height: 1.3)),
                     ),
                   ),
                   new Container(

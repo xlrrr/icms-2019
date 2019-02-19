@@ -106,58 +106,62 @@ class WorkshopsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return GridView.builder(
       itemCount: workshops.length,
+      gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (context, index) {
         return new Card(
-          margin: EdgeInsets.all(10),
-          child: Column(
+          margin: EdgeInsets.all(3),
+          child : new GridTile(
+            child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Container(
-                      child: new CircleAvatar(
-                        backgroundColor: Colors.transparent,
-                        backgroundImage: NetworkImage(workshops[index].photoURL),
-                        radius: 100.0,
-                      )
-                  )
-                ]
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new Container(
+                        child: new CircleAvatar(
+                          backgroundColor: Colors.transparent,
+                          backgroundImage: NetworkImage(workshops[index].photoURL),
+                          radius: 40.0,
+                        )
+                    )
+                  ]
               ),
               Row(
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
+                  new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.black, height: 2, fontSize: 15), textAlign: TextAlign.center))
                 ],
               ),
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Image.asset("assets/icons/iconlocationgradient.png", height: 20,),
-                        Text(workshops[index].place, style: TextStyle(color: Colors.black, fontSize: 20), textAlign: TextAlign.center)
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Image.asset("assets/icons/iconcalendargradient.png", height: 20,),
-                        Text(workshops[index].time, style: TextStyle(color: Colors.black, fontSize: 20), textAlign: TextAlign.center)
-                      ],
-                    )
-                  ],
-                ),
-              )
+
             ],
-          )
+          ),
+            footer: Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset("assets/icons/iconlocationgradient.png", height: 20,),
+                      Text(workshops[index].place, style: TextStyle(color: Colors.black, fontSize: 11), textAlign: TextAlign.center)
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset("assets/icons/iconcalendargradient.png", height: 20,),
+                      Text(workshops[index].time, style: TextStyle(color: Colors.black, fontSize: 11), textAlign: TextAlign.center)
+                    ],
+                  )
+                ],
+              ),
+            ),
+        ),
         );
       },
     );

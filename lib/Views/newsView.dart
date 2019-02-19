@@ -30,7 +30,7 @@ class NewsMenu extends StatelessWidget {
         body: new Container(
           decoration: new BoxDecoration(
             image: new DecorationImage(
-              image: new AssetImage("assets/bg.png"),
+              image: new AssetImage("assets/bluebg.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -39,13 +39,6 @@ class NewsMenu extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  new Container(
-                    margin: new EdgeInsets.only(left: 250.0),
-                    child: Image.asset("assets/logo.png"),
-                    padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
-                  )
-                ],
               ),
               new Container(
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
@@ -115,31 +108,30 @@ class NewsList extends StatelessWidget {
     return ListView.builder(
       itemCount: news.length,
       itemBuilder: (context, index) {
-        return new ListTile(
-          onTap: () => _onTapItem(context, news[index]),
-          //leading: new CircleAvatar(
-          //  backgroundColor: Colors.transparent,
-          //  backgroundImage: NetworkImage(speakers[index].photoURL),
-          //  radius: 30.0,
-          //),
-          leading: new Container(
-              child: new CircleAvatar(
-                backgroundColor: Colors.transparent,
-                backgroundImage: NetworkImage(news[index].photoURL),
-                radius: 30.0,
+        return new Card(
+          child: Container(
+            child: ListTile(
+              onTap: () => _onTapItem(context, news[index]),
+              leading: new Container(
+                  child: new CircleAvatar(
+                    backgroundColor: Colors.white,
+                    backgroundImage: NetworkImage(news[index].photoURL),
+                    radius: 30.0,
+                  ),
+                  padding: const EdgeInsets.all(2.0), // border width
+                  decoration: new BoxDecoration(
+                    color: const Color(0xFF13909B), // border color
+                    shape: BoxShape.circle,
+                  )
               ),
-              padding: const EdgeInsets.all(2.0), // border width
-              decoration: new BoxDecoration(
-                color: const Color(0xFFFFFFFF), // border color
-                shape: BoxShape.circle,
-              )
+              title: new Row(
+                children: <Widget>[
+                  new Expanded(child: Text(news[index].title, style: TextStyle(color: Colors.black),))
+                ],
+              ),
+              contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5),
+            ),
           ),
-          title: new Row(
-            children: <Widget>[
-              new Expanded(child: Text(news[index].title, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),))
-            ],
-          ),
-          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
         );
       },
     );
