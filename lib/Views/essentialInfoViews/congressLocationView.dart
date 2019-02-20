@@ -26,10 +26,6 @@ class CongressLocationMenu extends StatefulWidget {
 
 class _CongressLocationMenuState extends State<CongressLocationMenu> {
 
-  GoogleMapController mapController;
-  MapType _currentMapType = MapType.normal;
-
-  final LatLng _center = const LatLng(45.521563, -122.677433);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,27 +36,18 @@ class _CongressLocationMenuState extends State<CongressLocationMenu> {
               fit: BoxFit.cover,
             ),
           ),
-          child: Stack(
-              children: <Widget>[Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-              ),
-              new Container(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: FutureBuilder<List<CongressLocation>>(
-                  future: fetchCongressLocations(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasError) print(snapshot.error);
+          child: new Container(
+            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+            child: FutureBuilder<List<CongressLocation>>(
+              future: fetchCongressLocations(),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) print(snapshot.error);
 
-                    return snapshot.hasData
-                        ? CongressLocationsList(locations: snapshot.data, parent: this)
-                        : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white)));
-                  },
-                ),
-              )
-
-              ]
+                return snapshot.hasData
+                    ? CongressLocationsList(locations: snapshot.data)
+                    : Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),));
+              },
+            ),
           ),
         ),
         bottomNavigationBar:  new Container(
@@ -102,95 +89,53 @@ class _CongressLocationMenuState extends State<CongressLocationMenu> {
 
     );
   }
-
-  void _onMapCreated(GoogleMapController controller) {
-
-    controller.addMarker(MarkerOptions(
-      position: controller.cameraPosition.target,
-      visible: true,
-      infoWindowText: InfoWindowText('Random Place', '5 Star Rating'),
-      icon: BitmapDescriptor.defaultMarker,
-    ));
-  }
 }
 
 class CongressLocationsList extends StatelessWidget {
   final List<CongressLocation> locations;
-  final _CongressLocationMenuState parent;
 
-  CongressLocationsList({Key key, this.locations, this.parent}) : super(key: key);
-
+  CongressLocationsList({Key key, this.locations}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
-      itemCount: locations.length,
-      itemBuilder: (context, index) {
+    return ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: locations.length,
+        itemBuilder: (context, index) {
+          return new Card(
+              child:Column(
+                children: <Widget>[
+                  Container(
+                      child: Text(locations[index].title, style: TextStyle(color: Colors.black, height: 2, fontSize: 15), textAlign: TextAlign.center),padding: EdgeInsets.symmetric(vertical: 20)
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    height: 200,
+                    child: Stack(
+                      children: <Widget>[
+                        GoogleMap(
+                          onMapCreated: (GoogleMapController ctr)
+                          {
+                            ctr.addMarker(MarkerOptions(
+                                position: LatLng(locations[index].lat, locations[index].long),
+                                icon: BitmapDescriptor.defaultMarker,
+                                consumeTapEvents: true,
 
-        return Card(
-          child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-            children: <Widget>[
-              Center(
-                child: ListTile(
-                  onTap: () => _onTapItem(context, locations[index]),
-                  title: new Row(
-                    children: <Widget>[
-                      new Expanded(child: Text(locations[index].title, style: TextStyle(color: Colors.black), textAlign: TextAlign.center))
-                    ],
-                  )
-                )
-              ),
-              Container(
-                child: Stack(
-                  children: <Widget>[
-                    GoogleMap(
-                      onMapCreated: (GoogleMapController ctr)
-                      {
-                        ctr.addMarker(MarkerOptions(
-                          position: LatLng(locations[0].lat, locations[0].long),
-                          infoWindowText: InfoWindowText(locations[index].title, 'test'),
-                          icon: BitmapDescriptor.defaultMarker,
-                        ));
-                      },
-                      initialCameraPosition: CameraPosition(
-                        target: LatLng(locations[0].lat, locations[0].long),
-                        zoom: 16.0,
-                      ),
-                      trackCameraPosition: false,
-                      scrollGesturesEnabled: false,
-                      compassEnabled: false,
-                      rotateGesturesEnabled: false,
-                      tiltGesturesEnabled: false,
-                      zoomGesturesEnabled: false,
+                            ));
+                          },
+                          initialCameraPosition: CameraPosition(
+                            target: LatLng(locations[index].lat, locations[index].long),
+                            zoom: 15.0,
+                          ),
+                          mapType: MapType.normal,
+                        )
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Align(
-                        alignment: Alignment.topRight,
-                        child: Column(
-                          children: <Widget>[
-                            FloatingActionButton(
-                              //onPressed: _onMapTypeButtonPressed,
-                              materialTapTargetSize: MaterialTapTargetSize.padded,
-                              backgroundColor: Colors.green,
-                              child: const Icon(Icons.map, size: 36.0),
-                            ),
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               )
-            ],
-          ),
-        );
-      },
+          );
+        }
     );
   }
-}
-
-void _onTapItem(BuildContext context, CongressLocation entry) {
 
 }
