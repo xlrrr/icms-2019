@@ -23,6 +23,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   url_launcher: ^5.0.1
   firebase_messaging: ^3.0.1
+  google_maps_flutter: ^0.2.0+3
 
 dev_dependencies:
   flutter_test:
