@@ -2,6 +2,7 @@
   <library name="Dart Packages">
     <CLASSES>
       <root url="file://C:/flutter/.pub-cache/git/dart_config-a7ed88a4793e094a4d5d5c2d88a89e55510accde/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/android_intent-0.3.0+1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.8/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.5.1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.0.8/lib" />

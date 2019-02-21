@@ -23,6 +23,8 @@ class HexagonButton extends StatefulWidget
 
 class HexagonButtonState extends State<HexagonButton>
 {
+  bool m_isTapping = false;
+
   @override
   Widget build(BuildContext context) {
     return new GestureDetector(
@@ -80,6 +82,4 @@ class HexagonButtonState extends State<HexagonButton>
     //open another page
     widget.onPressed();
   }
-
-  bool m_isTapping = false;
 }
