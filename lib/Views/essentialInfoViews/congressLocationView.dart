@@ -84,7 +84,7 @@ class _CongressLocationMenuState extends State<CongressLocationMenu> {
                                 child: FloatingActionButton(
                                   onPressed: () => toggleFullScreen(),
                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: const Color(0xFF13909B),
                                   child: Icon(fullScreenMap ? Icons.fullscreen_exit : Icons.fullscreen, size: 36.0),
                                 ),
                               ),
@@ -96,7 +96,7 @@ class _CongressLocationMenuState extends State<CongressLocationMenu> {
                                 child: selEntry != null ? FloatingActionButton(
                                   onPressed: () => openInGoogleMaps(),
                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: const Color(0xFF13909B),
                                   child: Icon(Icons.navigation, size: 36.0),
                                 ) : null,
                               ),
@@ -131,6 +131,18 @@ class _CongressLocationMenuState extends State<CongressLocationMenu> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
+                ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Image.asset("assets/icons/iconlocationwhite.png"),
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                    Text("Congress\nlocation", textAlign: TextAlign.center, style: TextStyle(height: 1.5, color: Colors.white, fontSize: 17),)
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                 ),
                 IconButton(
                   icon: Image.asset("assets/icons/iconmail.png"),

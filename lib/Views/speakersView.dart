@@ -85,6 +85,18 @@ class SpeakersMenu extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Image.asset("assets/icons/iconpeoplewhite.png"),
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                    Text("Keynote\nspeakers", textAlign: TextAlign.center, style: TextStyle(height: 1.5, color: Colors.white, fontSize: 17),)
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                ),
                 IconButton(
                   icon: Image.asset("assets/icons/iconmail.png"),
                   color: Colors.white,
@@ -100,7 +112,6 @@ class SpeakersMenu extends StatelessWidget {
             ),
           ),
         )
-
     );
   }
 }
@@ -117,11 +128,6 @@ class SpeakersList extends StatelessWidget {
       itemBuilder: (context, index) {
         return new ListTile(
           onTap: () => _onTapItem(context, speakers[index]),
-          //leading: new CircleAvatar(
-          //  backgroundColor: Colors.transparent,
-          //  backgroundImage: NetworkImage(speakers[index].photoURL),
-          //  radius: 30.0,
-          //),
           leading: new Container(
               child: new CircleAvatar(
                 backgroundColor: Colors.transparent,

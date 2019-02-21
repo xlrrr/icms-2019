@@ -112,6 +112,18 @@ class ScheduleMenu extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Image.asset("assets/icons/iconcalendarwhite.png"),
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                    Text("Schedule", textAlign: TextAlign.center, style: TextStyle(height: 1.5, color: Colors.white, fontSize: 17),)
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                ),
                 IconButton(
                   icon: Image.asset("assets/icons/iconmail.png"),
                   color: Colors.white,
@@ -160,7 +172,7 @@ class ScheduleList extends StatelessWidget {
                     color: Colors.transparent,
                     child: Container(
                       width: MediaQuery.of(context).size.width/2 - 80,
-                          child: Text(scheduleEntries[index].name, textAlign: index % 2 == 0 ? TextAlign.left : TextAlign.right, style: TextStyle(color: Colors.white, fontSize: 18, height: 1.3)),
+                          child: Text(scheduleEntries[index].name, textAlign: index % 2 == 0 ? TextAlign.left : TextAlign.right, style: TextStyle(color: Colors.white, fontSize: 16, height: 1.3)),
                     ),
                   ),
                   new Container(

@@ -81,6 +81,18 @@ class RegistrationMenu extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Image.asset("assets/icons/iconpenwhite.png"),
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                    Text("Registration", textAlign: TextAlign.center, style: TextStyle(height: 1.5, color: Colors.white, fontSize: 17),)
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                ),
                 IconButton(
                   icon: Image.asset("assets/icons/iconmail.png"),
                   color: Colors.white,
@@ -96,7 +108,6 @@ class RegistrationMenu extends StatelessWidget {
             ),
           ),
         )
-
     );
   }
 }

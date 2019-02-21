@@ -166,6 +166,23 @@ class ContactUsMenu extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
+                ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Image.asset("assets/icons/iconearthwhite.png"),
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                    Text("Contact us", textAlign: TextAlign.center, style: TextStyle(height: 1.5, color: Colors.white, fontSize: 17),)
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                ),
+                IconButton(
+                  icon: Icon(null),
+                  iconSize: 40,
+                  color: Colors.transparent,
                 )
               ],
             ),

@@ -79,6 +79,18 @@ class WorkshopsMenu extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Image.asset("assets/icons/iconscalpelwhite.png"),
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                    Text("Workshops", textAlign: TextAlign.center, style: TextStyle(height: 1.5, color: Colors.white, fontSize: 17),)
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                ),
                 IconButton(
                   icon: Image.asset("assets/icons/iconmail.png"),
                   color: Colors.white,
@@ -123,18 +135,19 @@ class WorkshopsList extends StatelessWidget {
                         child: new CircleAvatar(
                           backgroundColor: Colors.transparent,
                           backgroundImage: NetworkImage(workshops[index].photoURL),
-                          radius: 40.0,
+                          radius: 35.0,
                         )
                     )
                   ]
               ),
-              Row(
-                //mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.black, height: 2, fontSize: 15), textAlign: TextAlign.center))
-                ],
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    new Expanded(child: Text(workshops[index].title, style: TextStyle(color: Colors.black, height: 1.5, fontSize: 14), textAlign: TextAlign.center))
+                  ],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                ),
               ),
-
             ],
           ),
             footer: Container(
