@@ -14,22 +14,58 @@ class SessionsMenu extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Stack(
-              children: <Widget>[Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                height:70,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
+                  child: new Theme(
+                    data: new ThemeData(
+                      primaryColor: Colors.white30,
+                      primaryColorDark: Colors.white12
+                    ),
+                    child: TextField(
+                      onChanged: (value) {
+
+                      },
+                      style: TextStyle(
+                        color: Colors.white
+                      ),
+                      controller: null,
+                      decoration: InputDecoration(
+                          labelText: "Search",
+                          labelStyle: TextStyle(
+                              color: Colors.white
+                          ) ,
+                          hintStyle: TextStyle(
+                            color: Colors.white
+                          ),
+                          prefixIcon: Icon(Icons.search, color: Colors.white,),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                              borderSide: BorderSide(color: Colors.red, width: 2)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                              borderSide: BorderSide(color: Colors.white, width: 2)),
+                          ),
+                      cursorColor: Colors.white,
+                    ),
+                  ),
+                ),
               ),
-              new Container(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              Expanded(
+                child: Padding(padding: EdgeInsets.only(top: 40, left: 10, right: 10, bottom: 10),
                 child: ListView.builder(
                   itemBuilder: (BuildContext context, int index) =>
                       EntryItem(data[index]),
                   itemCount: data.length,
                 ),
+                ),
               )
-
-              ]
+            ],
           ),
         ),
         bottomNavigationBar:  new Container(
@@ -108,12 +144,20 @@ final List<Entry> data = <Entry>[
         1,
         <Entry>[
           Entry('Session I', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
-          Entry('Session II', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
-          Entry('Session III', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+          Entry('Session II', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2)
         ],
       ),
-      Entry('Therapy',Bullet(shape:BoxShape.circle, useLogoInstead: false),1),
-      Entry('Surgery', Bullet(shape:BoxShape.circle, useLogoInstead: false),1),
+      Entry('Therapy',Bullet(shape:BoxShape.circle, useLogoInstead: false),1,
+      <Entry>[
+          Entry('Session I', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+          Entry('Session II', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+          Entry('Session III', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+      ]),
+      Entry('Surgery', Bullet(shape:BoxShape.circle, useLogoInstead: false),1,
+      <Entry>[
+        Entry('Session I', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+        Entry('Session II', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2)
+      ]),
       Entry('Public Health', Bullet(shape:BoxShape.circle, useLogoInstead: false),1)
     ],
   ),
@@ -122,8 +166,19 @@ final List<Entry> data = <Entry>[
     Bullet(),
     0,
     <Entry>[
-      Entry('TBA', Bullet(shape:BoxShape.circle, useLogoInstead: false),1),
-      Entry('TBA', Bullet(shape:BoxShape.circle, useLogoInstead: false),1),
+      Entry('Preclinic', Bullet(shape:BoxShape.circle, useLogoInstead: false),1 ,
+      <Entry>[
+        Entry('Session I', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+        Entry('Session II', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+      ]),
+      Entry('Therapy',Bullet(shape:BoxShape.circle, useLogoInstead: false),1,
+      <Entry>[
+        Entry('Session I', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+        Entry('Session II', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+        Entry('Session III', Bullet(shape:BoxShape.rectangle, useLogoInstead: false),2),
+      ]),
+      Entry('Surgery', Bullet(shape:BoxShape.circle, useLogoInstead: false),1),
+      Entry('Public Health', Bullet(shape:BoxShape.circle, useLogoInstead: false),1)
     ],
   )
 ];
