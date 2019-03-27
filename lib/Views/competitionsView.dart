@@ -58,36 +58,36 @@ class CompetitionsMenu extends StatelessWidget {
                           ],
                         )
                     ),
-                    Card(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(5),
-                              //padding: EdgeInsets.symmetric(vertical: 20),
-                              child: Image.asset("assets/awardsi.png"),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(vertical: 20),
-                              child: Row(
-                                //mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  new Expanded(child: Text("The Elsevier Challenge", style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
-                                ],
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(20),
-                              child: Row(
-                                //mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  new Expanded(child: Text("Tuka\nshte\nslojim\nmalko\ntext\ni nqkva snimka nali", style: TextStyle(color: Colors.black, height: 1.5, fontSize: 15), textAlign: TextAlign.center))
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                    )
+                    //Card(
+                    //    child: Column(
+                    //      crossAxisAlignment: CrossAxisAlignment.center,
+                    //      children: <Widget>[
+                    //        Container(
+                    //          padding: EdgeInsets.all(5),
+                    //          //padding: EdgeInsets.symmetric(vertical: 20),
+                    //          child: Image.asset("assets/awardsi.png"),
+                    //        ),
+                    //        Container(
+                    //          padding: EdgeInsets.symmetric(vertical: 20),
+                    //          child: Row(
+                    //            //mainAxisAlignment: MainAxisAlignment.center,
+                    //            children: <Widget>[
+                    //              new Expanded(child: Text("The Elsevier Challenge", style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
+                    //            ],
+                    //          ),
+                    //        ),
+                    //        Container(
+                    //          padding: EdgeInsets.all(20),
+                    //          child: Row(
+                    //            //mainAxisAlignment: MainAxisAlignment.center,
+                    //            children: <Widget>[
+                    //              new Expanded(child: Text("Tuka\nshte\nslojim\nmalko\ntext\ni nqkva snimka nali", style: TextStyle(color: Colors.black, height: 1.5, fontSize: 15), textAlign: TextAlign.center))
+                    //            ],
+                    //          ),
+                    //        )
+                    //      ],
+                    //    )
+                    //)
                   ],
                 ),
               )

@@ -69,7 +69,7 @@ class NetworkingMenu extends StatelessWidget {
                               child: Row(
                                 //mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  new Expanded(child: Text("The Gala", style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
+                                  new Expanded(child: Text("The Cocktail", style: TextStyle(color: Colors.black, height: 2, fontSize: 25), textAlign: TextAlign.center))
                                 ],
                               ),
                             ),
@@ -78,7 +78,7 @@ class NetworkingMenu extends StatelessWidget {
                               child: Row(
                                 //mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  new Expanded(child: Text("Tuka\nshte\nslojim\nmalko\ntext\ni nqkva snimka nali", style: TextStyle(color: Colors.black, height: 1.5, fontSize: 15), textAlign: TextAlign.center))
+                                  new Expanded(child: Text("The cocktail will take place at the Registration Venue Place on the 2nd floor right after official opening ceremony. Participants will get the chance to introduce themselves, meet fellow colleagues and start making unforgettable memories.", style: TextStyle(color: Colors.black, height: 1.5, fontSize: 15), textAlign: TextAlign.center))
                                 ],
                               ),
                             )
