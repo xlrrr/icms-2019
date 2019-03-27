@@ -7,6 +7,7 @@ import 'package:icms_bulgaria/Views/essentialInfoViews/registrationView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoViews/speakerPreviewView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoViews/regulationsView.dart';
 import 'package:icms_bulgaria/Views/essentialInfoViews/congressLocationView.dart';
+import 'package:icms_bulgaria/Views/essentialInfoViews/venuePlansView.dart';
 
 class EssentialInfoMenu extends StatelessWidget {
   @override
@@ -116,7 +117,13 @@ class EssentialInfoMenu extends StatelessWidget {
                         ),
                         new Container(
                           margin: new EdgeInsets.only(left: 210.0, top: 20.0),
-                          child: HexagonButton(title:"Venue plans",imageHighlighted: "assets/icons/iconbuildingwhite.png", image: "assets/icons/iconbuildinggradient.png"),
+                          child: HexagonButton(title:"Venue plans",imageHighlighted: "assets/icons/iconbuildingwhite.png", image: "assets/icons/iconbuildinggradient.png",
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => VenuePlansMenu()),
+                              );
+                            }),
                         ),
                         new Container(
                           margin: new EdgeInsets.only(right: 80.0, top: 185.0),

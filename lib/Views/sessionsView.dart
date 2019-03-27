@@ -10,34 +10,40 @@ class SessionsMenu extends StatefulWidget {
 class _SessionsMenuState extends State<SessionsMenu> {
   TextEditingController editingController = TextEditingController();
 
-  final duplicateItems = List<String>.generate(10000, (i) => "Item $i"); // all texts dictionary maybe
-  var items = List<String>(); // again dictionary
+
 
   @override
   void initState() {
-    items.addAll(duplicateItems);
+    filteredItems.addAll(map);
     super.initState();
   }
 
   void filterSearchResults(String query) {
-    List<String> dummySearchList = List<String>();
-    dummySearchList.addAll(duplicateItems);
+    filteredItems.clear();
+
     if(query.isNotEmpty) {
-      List<String> dummyListData = List<String>();
-      dummySearchList.forEach((item) {
-        if(item.contains(query)) {
-          dummyListData.add(item);
-        }
+      var dummyDictData = Map<int, List<String>>();
+      map.forEach((key, list) {
+        list.forEach((string){
+          if(string.toLowerCase().contains(query.toLowerCase()))
+          {
+            if(dummyDictData[key] == null)
+            {
+              dummyDictData[key] = List<String>();
+            }
+            dummyDictData[key].add(string);
+          }
+        });
       });
       setState(() {
-        items.clear();
-        items.addAll(dummyListData);
+        filteredItems.clear();
+        filteredItems.addAll(dummyDictData);
       });
       return;
     } else {
       setState(() {
-        items.clear();
-        items.addAll(duplicateItems);
+        filteredItems.clear();
+        filteredItems.addAll(map);
       });
     }
 
@@ -68,12 +74,12 @@ class _SessionsMenuState extends State<SessionsMenu> {
                     ),
                     child: TextField(
                       onChanged: (value) {
-
+                        filterSearchResults(value);
                       },
                       style: TextStyle(
                           color: Colors.white
                       ),
-                      controller: null,
+                      controller: editingController,
                       decoration: InputDecoration(
                         labelText: "Search",
                         labelStyle: TextStyle(
@@ -165,7 +171,35 @@ class Entry {
   final Bullet bullet;
   final List<Entry> children;
   final int itemsIndex;
+
+  bool isEmpty()
+  {
+    if(children.isEmpty)
+    {
+      return filteredItems[itemsIndex] == null || filteredItems[itemsIndex].length == 0;
+    }
+    else
+    {
+        bool hasNonEmptyChildren = false;
+
+        this.children.forEach((child){
+            if(child.isEmpty() == false)
+            {
+              hasNonEmptyChildren = true;
+            }
+        });
+
+        if(hasNonEmptyChildren)
+        {
+          return false;
+        }
+
+        return true;
+    }
+  }
 }
+
+var filteredItems = Map<int, List<String>>();
 
 final Map<int, List<String>> map =
 {
@@ -441,6 +475,10 @@ class EntryItem extends StatelessWidget {
   final Entry entry;
 
   Widget _buildTiles(Entry root) {
+    if(root.isEmpty())
+    {
+      return Container();
+    }
     if (root.children.isEmpty) return Card(
       child: ExpansionTile(
         leading: Container(child: root.bullet, padding: EdgeInsets.only(left: (root.depth * 30.0))),
@@ -462,7 +500,7 @@ class EntryItem extends StatelessWidget {
                     ),
                   ),
                   ListTile(
-                    title: Text(map[root.itemsIndex].join('\n\n'), style: TextStyle(color: Colors.black, height: 2, fontSize: 15)),
+                    title: Text(filteredItems[root.itemsIndex].join('\n\n'), style: TextStyle(color: Colors.black, height: 2, fontSize: 15)),
                   )
                 ],
               )
