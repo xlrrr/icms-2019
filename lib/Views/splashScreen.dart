@@ -68,6 +68,9 @@ class _SplashScreenState extends State<SplashMenu> with TickerProviderStateMixin
       print(token);
     });
 
+    // this will launch a modal asking if you want to receive notifications
+    _firebaseMessagin.requestNotificationPermissions();
+
     startTime();
 
     _controller = AnimationController(vsync: this, duration: Duration(seconds: 1));

@@ -8,9 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2581f41a-d712-4ccd-b500-aa05bca3003c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -94,19 +92,19 @@
     <session id="-1785645951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="7" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="dart" value="256" />
+          <entry key="dart" value="259" />
           <entry key="gradle" value="7" />
           <entry key="json" value="1" />
           <entry key="lock" value="2" />
@@ -115,12 +113,12 @@
           <entry key="pro" value="1" />
           <entry key="properties" value="2" />
           <entry key="xml" value="7" />
-          <entry key="yaml" value="6" />
+          <entry key="yaml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="256" />
+          <entry key="Dart" value="259" />
           <entry key="Groovy" value="7" />
           <entry key="Image" value="7" />
           <entry key="JSON" value="1" />
@@ -128,7 +126,7 @@
           <entry key="ProGuard File" value="1" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="7" />
-          <entry key="YAML" value="6" />
+          <entry key="YAML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -137,7 +135,7 @@
           <entry key="gradle" value="26" />
           <entry key="properties" value="36" />
           <entry key="xml" value="4" />
-          <entry key="yaml" value="18" />
+          <entry key="yaml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -146,30 +144,45 @@
           <entry key="Groovy" value="26" />
           <entry key="Properties" value="36" />
           <entry key="XML" value="4" />
-          <entry key="YAML" value="18" />
+          <entry key="YAML" value="24" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Views/workshopsView.dart">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Views/splashScreen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-272">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Views/essentialInfoViews/congressLocationView.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="71" column="37" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="659">
+              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -185,7 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>assets/icons/</find>
       <find>NetworkImage</find>
       <find>icon</find>
       <find>nETWORKiMAGE</find>
@@ -215,6 +227,7 @@
       <find>StatefulWidget</find>
       <find>flutter.versionCode</find>
       <find>versionCode</find>
+      <find>FirebaseMessaging</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,9 +281,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="229" />
-    <option name="y" value="162" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="47" />
+    <option name="y" value="396" />
     <option name="width" value="1391" />
     <option name="height" value="825" />
   </component>
@@ -280,8 +293,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -301,11 +312,20 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="icms-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="icms-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="essentialInfoViews" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,9 +422,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="107" width="1391" height="825" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20886551" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -421,7 +442,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49887303" weight="0.3263965" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.4978678" weight="0.3274918" />
       <window_info anchor="bottom" id="Flutter Performance" order="8" sideWeight="0.50319827" side_tool="true" weight="0.30827886" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.48773986" visible="true" weight="0.3878437" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" sideWeight="0.48773986" visible="true" weight="0.29067245" />
       <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.45895523" side_tool="true" weight="0.24186552" />
       <window_info anchor="bottom" id="Logcat" order="12" weight="0.32968238" />
@@ -536,13 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Views/splashScreen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -693,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Views/essentialInfoViews/congressLocationView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1258">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/flutter/packages/flutter/lib/src/widgets/scroll_position.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -777,16 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="122" column="40" lean-forward="true" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -822,9 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="803">
           <caret line="101" column="62" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,10 +839,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Views/essentialInfoViews/congressLocationView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="71" column="37" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="659">
+          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Views/splashScreen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>
