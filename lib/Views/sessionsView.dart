@@ -64,7 +64,7 @@ class _SessionsMenuState extends State<SessionsMenu> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
-                height:70,
+                height:110,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
                   child: new Theme(
@@ -99,7 +99,7 @@ class _SessionsMenuState extends State<SessionsMenu> {
                 ),
               ),
               Expanded(
-                child: Padding(padding: EdgeInsets.only(top: 40, left: 10, right: 10, bottom: 10),
+                child: Padding(padding: EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 10),
                   child: ListView.builder(
                     itemBuilder: (BuildContext context, int index) =>
                         EntryItem(data[index]),
