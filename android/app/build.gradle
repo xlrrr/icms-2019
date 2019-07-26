@@ -40,7 +40,7 @@ android {
     defaultConfig {
         applicationId "com.frosttale.icmsbulgaria"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
